@@ -1,0 +1,195 @@
+Core-Java :
+memory/Static/interfaces/exceptions and collections
+
+Write a Java program to replace certain characters from String like ?
+ charAt() or subString()
+
+Write a Comparator in Java to compare two employees based upon there name, departments and age?
+what is the difference between Comparator and Comparable ?
+How to reverse a string using API and withour using API ?
+How to use the wait,notify,notifyAll ?
+why we have wait and notify in Object Class ?
+
+Collections :
+how to count the repeated words in the large collection of string array ?
+Ans: By using the hashmap we can acheive this.
+
+Custom exception :
+Ans:
+Custom exceptions provide you the flexibility to add attributes and methods that are not part of a standard Java exception. 
+These can store additional information, like an application-specific error code, or provide utility methods that can be used to handle or present 
+the exception to a user.
+
+best practice for custom exceptions
+1)Always provide a benefit
+2)Follow the naming convention
+3)Provide Javadoc comments for your exception class
+
+ 
+what is the contract of equals and hashcode method ?
+1) If two objects are equal, then they must have the same hash code.
+2) If two objects have the same hash code, they may or may not be equal.
+
+i have overrided the equals method but not overrided the hashcode , Is it will create issue ?
+yes when using these object as a key in the hashamp , it will create the issue.
+it is better approach to override both equals and hashcode always.
+
+how to choose iterator or foreach ?
+
+
+Multithreading using excuter framewrok
+
+How to make your class immutable ?
+Mark the class final
+Mark all the fields private and final
+
+What are the advantages of immutable class / where you used immutable class in your project ?
+Immutable objects are thread-safe so you will not have any synchronization issues
+Immutable objects are good Map keys and Set elements, since these typically do not change once created
+
+Java 6 features:
+
+Java 7 features:
+diamond operator to initialize the collections
+Strings in switch Statement/Type Inference for Generic Instance Creation/Multiple Exception Handling/Support for Dynamic Languages
+Try with Resources/Java nio Package/Binary Literals, underscore in literals/Diamond Syntax/Automatic null Handling
+
+Java 8 new features:
+Lambda expression/Functional interfaces/Static and default methods in interfaces/Stream api
+Java JDBC Improvements (Java 8)/Java IO Improvement (Java 8)/Java Concurrency Improvement (Java 8)
+
+callable vs runnable threads 
+
+
+Distributed environment how will you ensure data can't be overridden?
+
+“Serialization in Java”.-->Serialization is JVM independent & How to serialize 
+Can we do custom serializtion ??
+Yes we can overirde the ObjectOutputStream.writeObject (saveThisobject) and ObjectInputStream.readObject()
+
+why we need custom serializtion ??
+super class of a new class is implementing the serializable interface , then to avoid the serialization need to override the writeObject & readObject
+
+Have you created the custom annotation ?
+
+Singleton class 
+what is the best way to create the singleton pattern ??
+Use an enum
+
+Inner class
+Generics
+Synchronization in Java
+
+Spring :
+Spring Core (IOC)
+
+how to create the bean for the packages having the 100 classes ?
+ans: by using the component scan annotation
+
+PlatformTransactionManager
+Roll back process in declarative transaction 
+ContextLoaderListener
+isolation types  -> ISOLATION_DEFAULT: default isolation. 
+                 b. ISOLATION_READ_COMMITTED: dirty reads are prevented, non-repeatable and phantom reads are allowed.
+                 c. ISOLATION_READ_UNCOMMITTED : dirty reads are allowed, no-repeatable and phantom reads are allowed. 
+                 d. ISOLATION_REPEATABLE_READ: dirty reads and non-repeatable reads are prevented but phantom reads are allowed. 
+                 e. ISOLATION_SERIALIZABLE.
+Propagation -->  a. PROPAGATION_MANDATORY : supports current transaction and throws exception if no transaction available. 
+				 b. PROPAGATION_NESTED : runs with nested transaction 
+				 c. PROPAGATION_NEVER : does not run with current transaction and throws exception if current transaction exits. 
+				 d. PROPAGATION_NOT_SUPPORTED : runs non -transactionaly and does not support current transaction. 
+				 e. PROPAGATION_REQUIRED : runs with current transaction and create one if does not exist. 
+				 f. PROPAGATION_REQUIRES_NEW : creates new transaction and suspends if exits any. 
+				 g. PROPAGATION_SUPPORTS: runs current transaction and runs non -transactionaly
+What Method that allows you to start a new transaction
+What is view Resolver pattern? how it works in Spring MVC
+How do you create a controller in Spring? @Controller vs @RestController?
+@Controller is required to add the  @ResponseBody
+@RestController @ResponseBody is implied
+
+Can you explain How one request is processed
+
+
+Hibernate:
+Lazy loading and eager loading 
+Is Sessionfactory immutable?
+Hibernate configuration file mandatory?
+what is meant by annotation in hibernate?
+What is the meaning of persistence in hibernate?
+What is lazy fetching in Hibernate?
+What does hibernate.hbm2ddl.auto create means?
+What is first level cache in hibernate?
+Can I disable first level cache in hibernate?
+One to Many & Many-Many mapping explanation.
+What is the difference between save() and persist() method in Hibernate?
+What is difference between getCurrentSession() and openSession() in Hibernate?
+sorted and ordered collection in Hibernate
+hibernate session
+
+Difference between get() vs load() method in Hibernate?
+load will throw exception if data not available
+get will retrun the null if data not available
+
+what is first level cache in hibernate ?
+it is default cache provided by hibernate, it mainatin at session level
+first level cache cannot be disable
+second level cache maintained at sessionfactory level
+
+
+Spring Boot :
+
+what is auto configuration in spring boot ?
+what spring boot starter will do ?
+can tell what are the spring boot starter options used in your project?
+what are embedded container in spring boot ?
+
+spring-boot-starter-undertow, spring-boot-starter-jetty, spring-boot-starter-tomcat
+Simple hello world program using Spring Boot Application.
+spring boot annotations
+configure datasource in spring boot
+reload my changes on Spring Boot without having to restart server --> spring-boot-devtools
+Have you written Test cases using Spring Boot --> @SpringBootTest
+security for Spring boot application -->  spring-boot-starter-security dependency ( Config class will have to extend WebSecurityConfigurerAdapter and override its methods)
+Have you used any caching framework with Spring Boot -->Hazelcast
+what is the purpose of swagger ??
+
+Web-Services :
+How would you choose between SOAP and REST web services?
+What is REST Webservices? Adv and Disadv ?
+Different status code in HTTP response?
+Can we maintain user session in web services
+
+MAVEN :
+maven artifact
+How Maven searches for dependency JAR?
+What is dependency tag used for in pom.xml
+phases of a maven build life cycle
+What is the command to skip maven test cases?  --> mvn package -Dmaven.test.skip=true
+Can we install external jar to maven repository ?
+
+Database :
+Union and UnionAll difference
+syntax for to rename column name in a table
+PrimaryKey vs Unique Key difference
+Indexs 
+Procedure vs function
+joins
+
+Additional :
+memory leaks
+Code optimization
+Git commands
+Code coverage tools like Mock / JUnit
+
+SQL:
+what is the diff b/w delete and drop ?
+drop/truncate is DDL - cant rollback
+delete us DML - can do rollback
+how to convert the db date into string using sql function ?
+how to find the max from the db column but it is varchar column storing the numbers ? 
+i have column in DB  as clob but i am setting using update query , Is there any issuue ?
+
+Explain the flow of your application ?
+give sample scenario to expect the flow like e-commerece
+
+	
